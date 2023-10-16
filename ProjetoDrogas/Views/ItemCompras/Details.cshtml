@@ -1,0 +1,30 @@
+﻿@model ProjetoDrogas.Models.ItemCompra
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ItemCompra</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Compras)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Compras.CompraId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Produtos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Produtos.ProdutoId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ItemCompraId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
